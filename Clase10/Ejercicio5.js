@@ -23,3 +23,14 @@ Pista 1: Recuerda que para crear una variable utilizamos la palabra "let"
 seguida del nombre al cual vamos a hacer referencia.
 Pista 2: Para asignar el valor a una variable utilizamos el operador "=" 
 seguido del valor que queremos asignarle.*/
+let firstnumber = 10
+let secondnumber = 5
+let resultadoSuma = firstnumber + secondnumber
+let resultadoResta = firstnumber - secondnumber
+let resultadoMultiplicacion = firstnumber * secondnumber
+let resultadoDivision = firstnumber / secondnumber
+console.log("el resultado de la sumatoria de ambas variables es " + resultadoSuma);
+console.log("el resultado de la resta de ambas variables es " + resultadoResta);
+console.log("el resultado de la multiplicacion de ambas variables es " + resultadoMultiplicacion);
+console.log("el resultado de la division de ambas variables es " + resultadoDivision);
+

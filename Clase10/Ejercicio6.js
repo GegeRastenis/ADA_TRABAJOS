@@ -18,3 +18,11 @@ Pista 2: Los operadores de comparación en JavaScript son >, <, >=, <=,
 ===, !==. El operador lógico "&&" (y lógico) se utiliza para combinar 
 condiciones y todas deben cumplirse para que el resultado sea 
 verdadero*/
+let variable1 = 11
+let variable2 = 15
+if (variable1 > 10 && variable2 > 10){
+    console.log(`TRUE`);
+}
+else{
+    console.log(`FALSE`);
+}
