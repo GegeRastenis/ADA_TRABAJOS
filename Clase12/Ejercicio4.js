@@ -9,3 +9,19 @@ una utilizando el método prompt.
 4. Usa un bucle for para solicitar las notas y asignarlas directamente a 
 posiciones específicas del array notas.
 5. Imprime en consola las notas ingresadas usando el array notas.*/
+
+const prompt = require("prompt-sync")({ sigint: true})
+let notas = []
+let cantidad_notas = parseInt(prompt("Cuantas notas vas a ingresar? "));
+let calificacion;
+
+for(let i = 0; i < cantidad_notas; i++){
+    calificacion = parseInt(prompt(`Ingrese la nota ${i+1}: `));
+    notas.push(calificacion);
+    //notas[i] = calificacion; 
+}
+console.log(notas);
+
+
+
+
