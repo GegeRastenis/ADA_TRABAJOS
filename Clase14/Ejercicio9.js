@@ -16,3 +16,23 @@ consola la posición (índice + 1) en la que aparece (considerando que la
 numeración es de 1 a N).
 ✓ Si el modelo no está en el array, debe imprimir un mensaje indicando que 
 el modelo no está presente*/
+
+let modelosAutosFiat = ['Palio', 'Mobi', 'Cronos', 'Mobi', 'Pulse', 'Toro', 'Palio', 'Fiorino', 'Ducato']; 
+
+function ultimaAparicionModeloAuto (modelo){
+    let ultimaAparicion; 
+    let encontrado = false; 
+    for(let i = 0; i < modelosAutosFiat.length; i++){
+    if(modelo == modelosAutosFiat[i]){
+        encontrado = true; 
+        ultimaAparicion = i; 
+        }
+    }
+if(!encontrado){
+    return `El modelo no fue encontrado`;
+   }
+return ultimaAparicion + 1; 
+}
+let ultimaAparicion = ultimaAparicionModeloAuto('Ducato'); 
+
+console.log(`La ultima aparicion del modelo se encuentra en la posicion ${ultimaAparicion}`);
