@@ -8,3 +8,16 @@ o Finalmente, construye una frase que diga: "Los nombres
 seleccionados son: [nombres]", donde [nombres] sea la lista 
 resultante unida por comas.
 Al final, imprime la frase en la consola*/
+let nombresDePersonas = ['Lucía', 'Ana', 'María', 'Luis', 'José', 'Pablo'];
+let nombresCortos = nombresDePersonas.filter(function(nombres){
+    return nombres.length < 5
+})
+console.log(nombresCortos); 
+
+nombresCortos.forEach(function(nombre){
+    console.log(nombre.toUpperCase()); 
+})
+//let cortos = "Ana, Luis, Jose"
+//console.log(cortos.toUpperCase()); 
+
+console.log(`Los nombres seleccionados son ${nombresCortos.join(", ")} `); 
