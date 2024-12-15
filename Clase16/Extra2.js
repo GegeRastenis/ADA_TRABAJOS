@@ -12,39 +12,29 @@ let listaDeProductos = [
 
 //A) Seleccionar los productos cuyo precio sea mayor o igual a 50
 
-let precios = []; 
-let nombres = []; 
-
-for(let i = 0; i < listaDeProductos.length; i++){
-    //console.log(`${listaDeProductos[i].price}`)
-    precios.push(listaDeProductos[i].price); 
-
-}
-//console.log(precios); 
-
-let precioMasCaro = precios.filter(function(num){
-    return num >= 50;  
+let precioMasCaro = listaDeProductos.filter(function(producto){
+    return producto.price >= 50; 
 })
 console.log(precioMasCaro); 
 
 //B) Obtener solo los nombres de esos productos
 
-for(let i = 0; i < listaDeProductos.length; i++){
-    console.log(`${listaDeProductos[i].name}`)
-    nombres.push(listaDeProductos[i].name); 
-
-}
-console.log(nombres); 
+let nombreDeProductos = precioMasCaro.map(function(producto){
+    return ' ' + producto.name
+}); 
+console.log(nombreDeProductos); 
 
 //C) Calcular el precio total sumando los precios de los productos seleccionados
 
-let precioTotal = precios.reduce(function(acumulador, num){
-    return num + acumulador
-})
-console.log(precioTotal); 
+let precioTotal = precioMasCaro.reduce(function(acumulador, producto){
+return acumulador + producto.price;
+}, 0); 
+console.log(precioTotal);
 
 //D) Imprime el total y los nombres de los productos seleccionados en la consola
 
-listaDeProductos.forEach(function(total){
-    console.log(total); 
-})
+//listaDeProductos.forEach(function(total){
+//console.log(total); 
+//})
+
+console.log(`El total de los productos ${nombreDeProductos} es de: ${precioTotal}`); 

@@ -9,6 +9,10 @@ const movies = [
 ];
 
 // A) Encontrar la película más corta en duración
+
+let mostrarDuracion = movies.find(movies => movies.duration > 100); 
+console.log(mostrarDuracion); 
+
 // B) De las películas restantes, quedarnos con aquellas cuyo título tenga más de 10 caracteres
 // C) Crear una lista de los títulos largos en minúsculas
 // Imprime en la consola:
