@@ -31,10 +31,6 @@ return acumulador + producto.price;
 }, 0); 
 console.log(precioTotal);
 
-//D) Imprime el total y los nombres de los productos seleccionados en la consola
-
-//listaDeProductos.forEach(function(total){
-//console.log(total); 
-//})
+//D) Imprime el total y los nombres de los productos seleccionados en la consolaclea
 
 console.log(`El total de los productos ${nombreDeProductos} es de: ${precioTotal}`); 

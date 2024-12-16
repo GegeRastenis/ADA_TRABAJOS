@@ -6,5 +6,6 @@ finalizar, imprime el total en la consola*/
 let numeros = [1, 2, 3, 4]; 
 let suma = numeros.reduce(function(acumulador, num){
     return acumulador + num; 
-}); 
+}
+,0); 
 console.log(suma); 
