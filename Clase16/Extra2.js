@@ -34,3 +34,4 @@ console.log(precioTotal);
 //D) Imprime el total y los nombres de los productos seleccionados en la consolaclea
 
 console.log(`El total de los productos ${nombreDeProductos} es de: ${precioTotal}`); 
+
