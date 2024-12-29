@@ -8,3 +8,36 @@ que realice las siguientes tareas:
 4. Combine las palabras de cada frase en una nueva cadena 
 separada por espacios.
 5. Devuelva un nuevo array con las frases modificadas*/
+let frases = [
+    "El clima es MALO hoy", 
+    "Este libro es muy MALO", 
+    "El servicio aqui es MALO"
+];
+
+function procesarFrases(frases){
+
+    let frasesmodificadas = frases.map(function(oracion){
+    let fraseEnMinuscula = oracion.toLowerCase(); 
+    //console.log(fraseEnMinuscula);
+    
+    let palabras = fraseEnMinuscula.split(" "); 
+    //console.log(palabras); 
+
+    let bueno = palabras.map(palabra =>
+    palabra.replace(/malo/, 'bueno')); 
+    //console.log(bueno);
+
+    let nuevaFrase = bueno.join(" "); 
+    //console.log(nuevaFrase) 
+    return nuevaFrase; 
+    
+}); 
+
+return frasesmodificadas; 
+
+}
+    
+console.log(procesarFrases(frases)); 
+
+
+    
