@@ -38,7 +38,7 @@ function ordenarBubbleSort(list){
         while(masBajo <= masAlto){
             const medio = Math.floor((masBajo + masAlto) /2); 
         
-            const search = list[medio]; 
+            const search = listaOrdenada[medio]; 
             if(search === busqueda){
                 return medio; 
             }
@@ -51,8 +51,8 @@ function ordenarBubbleSort(list){
           }
           return null; 
         }
-        console.log(`La posicion del numero 12 es: ${ busquedaBinaria(list, 12)}`);  
-        console.log(`La posicion del numero 5 es: ${ busquedaBinaria(list, 5)}`); 
-        console.log(`La posicion del numero 22 es: ${ busquedaBinaria(list, 22)}`); 
-        console.log(`La posicion del numero 100 es: ${ busquedaBinaria(list,100)}`); 
+        console.log(`La posicion del numero 12 es: ${ busquedaBinaria(listaOrdenada, 12)}`);  
+        console.log(`La posicion del numero 5 es: ${ busquedaBinaria(listaOrdenada, 5)}`); 
+        console.log(`La posicion del numero 22 es: ${ busquedaBinaria(listaOrdenada, 22)}`); 
+        console.log(`La posicion del numero 100 es: ${ busquedaBinaria(listaOrdenada,100)}`); 
            
