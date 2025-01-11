@@ -5,11 +5,16 @@ Consigna:
 • Usa el método split() para dividir el nombre.
 • Usa un bucle for y métodos de string.*/
 let nombre = "juan perez gomez";
-let nombreDividido = []
+
 function generarIniciales(nombre){
-    nombreDividido = nombre.split(" ")
-    console.log(nombreDividido); 
-   
-    return nombreDividido
+    nombre = nombre.split(" ")
+    //console.log(nombre); 
+    let iniciales = ""; 
+    for(let i = 0; i < nombre.length; i++){
+        iniciales += nombre[i][0]
     }
-generarIniciales(nombre); 
+    iniciales = iniciales.toUpperCase();  
+    return iniciales
+    
+    }; 
+console.log(generarIniciales(nombre)); 

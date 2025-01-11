@@ -5,9 +5,10 @@ Consigna:
 • Usa el método filter().
 • Usa una función flecha para simplificar el código.*/
 let palabras = ["javascript", "html", "css", "nodejs"]; 
-const prompt = require("prompt-sync")({ sigint: true})
-let numero = parseFloat (prompt("Por favor ingrese un numero: ")); 
-let contador = 0; 
-function contandoCaracteres(palabras){
 
+const filtrarPalabras = (palabras, numero) => {
+    let mayoresA5 = palabras.filter(palabra => palabra.length > numero); 
+    return mayoresA5;
 }
+
+console.log(filtrarPalabras(palabras, 5)); 
