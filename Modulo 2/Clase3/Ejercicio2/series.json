@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "nombre": "La Casa de Papel",
+    "temporadas": 5
+  },
+  {
+    "id": 2,
+    "nombre": "Friends",
+    "temporadas": 10
+  },
+  {
+    "id": 3,
+    "nombre": "Orange is the New Black",
+    "temporadas": 7
+  },
+  {
+    "id": 4,
+    "nombre": "The Office",
+    "temporadas": 5
+  }
+]

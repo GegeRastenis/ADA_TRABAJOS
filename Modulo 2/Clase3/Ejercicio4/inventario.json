@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nombre": "Desodorantes",
+    "cantidadProducto": 5
+  },
+  {
+    "id": 2,
+    "nombre": "Perfumes",
+    "cantidadProducto": 50,
+    "cantidad": 70
+  },
+  {
+    "id": 3,
+    "nombre": "Repelentes",
+    "cantidadProducto": 20
+  }
+]
