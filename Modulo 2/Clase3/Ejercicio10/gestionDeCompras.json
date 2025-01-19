@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "producto": "Lentes",
+    "precio": "500 USD"
+  },
+  {
+    "id": 3,
+    "producto": "Jeans",
+    "precio": "80 USD"
+  },
+  {
+    "id": 4,
+    "producto": "Camisa",
+    "precio": "120 USD"
+  },
+  {
+    "id": 5,
+    "producto": "Vestido",
+    "precio": "300 USD"
+  }
+]

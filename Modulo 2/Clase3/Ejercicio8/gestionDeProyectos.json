@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombreProyecto": "Generar una Nueva Base de Datos",
+    "estado": "en progreso"
+  },
+  {
+    "id": 2,
+    "nombreProyecto": "Busqueda de Nuevos Clientes",
+    "estado": "finalizado"
+  },
+  {
+    "id": 3,
+    "nombreProyecto": "Lanzamiento de Nuevos Productos",
+    "estado": "en progreso"
+  }
+]

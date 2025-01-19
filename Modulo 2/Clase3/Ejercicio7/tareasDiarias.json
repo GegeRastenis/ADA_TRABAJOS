@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Hacer las compras",
+    "estado": "pendiente"
+  },
+  {
+    "id": 2,
+    "descripcion": "Ir a entrenar",
+    "estado": "completada"
+  },
+  {
+    "id": 3,
+    "descripcion": "Pasear a Jack",
+    "estado": "pendiente"
+  },
+  {
+    "id": 4,
+    "descripcion": "Estudiar",
+    "estado": "pendiente"
+  }
+]
