@@ -1,0 +1,22 @@
+[
+  {
+    "tipo": "correr",
+    "duracionMinutos": 50,
+    "fecha": "21/1/2025"
+  },
+  {
+    "tipo": "nadar",
+    "duracionMinutos": 30,
+    "fecha": "21/1/2025"
+  },
+  {
+    "tipo": "andar en bici",
+    "duracionMinutos": 120,
+    "fecha": "21/1/2025"
+  },
+  {
+    "tipo": "pole sport",
+    "duracionMinutos": 60,
+    "fecha": "21/1/2025"
+  }
+]
