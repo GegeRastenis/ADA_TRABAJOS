@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Ordenar libros",
+    "descripcion": "Ordenar libros alfabeticamente",
+    "estado": "completada"
+  },
+  {
+    "nombre": "Ordenar vestidor",
+    "descripcion": "Ordenar prendas por colores",
+    "estado": "pendiente"
+  },
+  {
+    "nombre": "Ordenar zapatos",
+    "descripcion": "Ordenar zapatos por tamanio",
+    "estado": "pendiente"
+  }
+]

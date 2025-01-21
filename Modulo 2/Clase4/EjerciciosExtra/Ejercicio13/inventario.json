@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "Caramelos",
+    "cantidad": 6000,
+    "precio": 50
+  },
+  {
+    "nombre": "Chupetines",
+    "cantidad": 3500,
+    "precio": 100
+  },
+  {
+    "nombre": "Chocolates",
+    "cantidad": 5000,
+    "precio": 300
+  }
+]
