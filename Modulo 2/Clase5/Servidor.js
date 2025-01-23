@@ -80,6 +80,4 @@ socket.on('end', ()=>{
 const port = 5000
 server.listen(port,()=>{
 console.log(`El servidor esta escuchando desde el puerto ${port}`)
-})
-
-
+}); 

@@ -34,7 +34,7 @@ const server = net.createServer((socket)=>{
 
 //Paso 3
   socket.on('end', ()=>{
-  clientesConectados -- 
+  clientesConectados --; 
   console.log(`Un cliente se ha desconectado. Clientes conectado: ${clientesConectados}`);
   }); 
 
@@ -43,4 +43,4 @@ const server = net.createServer((socket)=>{
 const port = 5000
 server.listen(port,()=>{
 console.log(`El servidor esta escuchando desde el puerto ${port}`)
-  }); 
+});
