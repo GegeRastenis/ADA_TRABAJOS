@@ -25,7 +25,7 @@ const client = net.createConnection({port: PORT, host: HOST}, ()=>{
     
     client.ref(); 
 
-   },5000)
+   },5000); 
 
 });
 
