@@ -5,3 +5,9 @@ Instrucciones:
 2. Define un objeto JSON que represente a una persona (incluye 
 campos como nombre, edad, y email).
 3. Convierte el objeto JSON a una cadena y muéstralo en la consola.*/
+
+let jsonString = '{"nombre" : "Giselle", "edad" : 43, "email" : "giselle@gmail.com"}'
+
+let cadena = JSON.parse(jsonString); 
+
+console.log(cadena); 
