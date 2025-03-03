@@ -25,3 +25,26 @@ un "comando" puede ser cualquier tipo de dato que el cliente
 envíe al servidor para que lo procese. En este caso, el 
 "comando" es una ruta de archivo que el cliente envía al 
 servidor.*/
+
+const path = require('path'); 
+const net = require('net'); 
+
+const server = net.createServer(); 
+server.on('connection', (socket) =>{
+    socket.on('data', (data)=>{
+        const inputPath = data.toString().trim(); 
+        const isAbsolute = path.isAbsolute(inputPath)
+        
+        const response = isAbsolute? 'La ruta es absoluta' : 'La ruta es relativa'; 
+
+        socket.write(response); 
+    })
+
+    socket.on('end', ()=>{
+        console.log('Cliente desconectado'); 
+    })
+})
+
+server.listen(8080, ()=>{
+    console.log('Servidor escuchando desde el puerto 8080'); 
+}); 

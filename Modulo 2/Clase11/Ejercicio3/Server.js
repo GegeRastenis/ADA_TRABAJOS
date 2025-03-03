@@ -17,3 +17,33 @@ Instrucciones:
 • Ejecuta el servidor y conecta un cliente.
 • Envía rutas completas (e.g., /home/user/docs/file.txt) para 
 verificar la funcionalidad*/
+
+const net = require('net'); 
+const path = require('path'); 
+
+const server = net.createServer((socket)=>{
+    console.log('Cliente conectado'); 
+
+    socket.on('data', (data)=>{
+        const rutaRecibida = data.toString().trim(); 
+
+        const baseName = path.basename(rutaRecibida); 
+        const dirName = path.dirname(rutaRecibida); 
+        const extName = path.extname(rutaRecibida); 
+
+        const respuesta = `Base del Nombre : ${baseName}\n`+ 
+        `Directorio: ${dirName}\n` + 
+        `Extension del Archivo: ${extName}`; 
+
+        socket.write(respuesta); 
+
+    }); 
+
+    socket.on('end', ()=>{
+        console.log('Cliente desconectado'); 
+    })
+}); 
+
+server.listen(8082, ()=>{
+    console.log('Servidor escuchando desde el puerto 8082'); 
+}); 

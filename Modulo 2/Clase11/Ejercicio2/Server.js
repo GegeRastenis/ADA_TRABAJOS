@@ -14,3 +14,28 @@ Instrucciones:
 • Ejecuta el servidor y conecta un cliente.
 • Envía rutas con barras redundantes y puntos (e.g., 
 ./docs/../file.txt) para verificar la funcionalidad.*/
+
+const net = require('net'); 
+const path = require('path'); 
+
+const server = net.createServer((socket) =>{
+    console.log('Cliente conectado'); 
+
+    socket.on('data', (data)=>{
+        const rutaRecibida = data.toString().trim()
+        
+        const normalizarRuta = path.normalize(rutaRecibida); 
+
+        socket.write(normalizarRuta); 
+    }); 
+    
+    socket.on('end', ()=>{
+    console.log('Cliente desconectado')
+   });
+
+}); 
+
+server.listen(8081, ()=>{
+    console.log('Servidor escuchando desde el puerto 8081'); 
+})
+
