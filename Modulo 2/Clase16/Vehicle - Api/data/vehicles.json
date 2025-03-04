@@ -1,0 +1,11 @@
+[{"vehiculo" : "Moto", 
+"marca": "Zanella",
+ "modelo": "Jaguar"},
+
+{"vehiculo" : "Auto", 
+"marca": "Renault",
+ "modelo": "Captur"},
+
+ {"vehiculo" : "Camioneta", 
+  "marca": "Toyota",
+  "modelo": "Hilux"}]
