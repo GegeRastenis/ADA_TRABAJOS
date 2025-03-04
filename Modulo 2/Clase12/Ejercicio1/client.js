@@ -11,3 +11,21 @@ Estructura del Proyecto:
 solicitudes.
 • server.js: Servidor TCP.
 • client.js: Cliente TCP.*/
+
+const net = require('net'); 
+
+const client = net.createConnection({port: 4000}, ()=>{
+    console.log('Conectado al Servidor'); 
+
+    const bookId = '1'; 
+    client.write(bookId)
+}); 
+
+client.on('data', (data)=>{
+    console.log('Respuesta del servidor: ', data.toString()); 
+    client.end()
+})
+
+client.on('end', ()=>{
+    console.log('Conexion cerrada con el servidor'); 
+})

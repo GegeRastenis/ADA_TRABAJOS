@@ -21,3 +21,28 @@ luego pasar esos datos a la vista para formatear la
 respuesta.
 o El servidor debe enviar la respuesta al cliente y cerrar la 
 conexión.*/
+
+const net = require('net')
+
+const controllersBooks = require('./Controllers/controllersBooks')
+
+const server = net.createServer((socket)=>{
+    console.log('Cliente conectado'); 
+
+    socket.on('data', (data)=>{
+        const bookId = data.toString().trim(); 
+        console.log(`Solicitud recibida: ID ${bookId}`); 
+
+        const response = controllersBooks.handleRequest(bookId)
+
+        socket.write(response)
+    })
+
+    socket.on('end', ()=>{
+        console.log('Cliente desconectado')
+    })
+})
+
+server.listen(4000, ()=>{
+    console.log('Servidor escuchando desde el puerto 4000'); 
+})

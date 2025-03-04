@@ -21,3 +21,44 @@ luego pasar esos datos a la vista para formatear la
 respuesta.
 o El servidor debe enviar la respuesta al cliente y cerrar la 
 conexión*/
+
+const net = require('net')
+const readline = require('readline'); 
+
+const rl = readline.createInterface({
+    input: process.stdin, 
+    output: process.stdout
+})
+
+const options = {
+    port: 4002, 
+    host: 'localhost',
+}; 
+
+const peliculaConsultada = (titulo)=>{
+const client = net.createConnection(options); 
+client.on('connect', ()=>{
+    console.log(`Conectado al servidor. Solicitando pelicula con titulo: ${titulo}`); 
+    client.write(titulo); 
+    });
+
+    client.on('data', (data)=>{
+        console.log('Respuesta del servidor', data.toString()); 
+        client.end(); 
+    })
+
+    client.on('close', ()=>{
+        console.log('Conexion cerrada'); 
+        rl.close; 
+    })
+
+    client.on('error', (err)=>{
+        console.error(err.message); 
+        rl.close
+    }); 
+
+}; 
+
+rl.question('Ingrese el Titulo de la pelicula solicitada: ', (titulo)=>{
+    peliculaConsultada(titulo); 
+}); 

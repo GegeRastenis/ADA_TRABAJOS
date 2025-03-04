@@ -11,3 +11,46 @@ Estructura del Proyecto:
 solicitudes.
 • server.js: Servidor TCP.
 • client.js: Cliente TCP.*/
+
+const net = require('net')
+const readline = require('readline'); 
+
+const rl = readline.createInterface({
+    input: process.stdin, 
+    output: process.stdout
+})
+
+const options = {
+    port: 4001, 
+    host: 'localhost',
+}; 
+
+const hotelConsultado = (hotelId)=>{
+const client = net.createConnection(options); 
+
+
+    client.on('connect', ()=>{
+    console.log(`Conectado al servidor. Solicitando disponibilidad del hotel con ID: ${hotelId}`); 
+    client.write(hotelId); 
+    });
+
+    client.on('data', (data)=>{
+        console.log('Respuesta del servidor', data.toString()); 
+        client.end(); 
+    })
+
+    client.on('close', ()=>{
+        console.log('Conexion cerrada'); 
+        rl.close; 
+    })
+
+    client.on('error', (err)=>{
+        console.error(err.message); 
+        rl.close
+    }); 
+
+}; 
+
+rl.question('Ingrese el ID del hotel requerido: ', (hotelId)=>{
+    hotelConsultado(hotelId); 
+}); 

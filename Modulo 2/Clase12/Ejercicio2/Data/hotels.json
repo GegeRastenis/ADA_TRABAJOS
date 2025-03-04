@@ -1,0 +1,12 @@
+[{"id": 1, 
+"Hotel": "Sheratton Hotel", 
+"Ubicacion": "Cancun", 
+"Habitaciones disponibles": 5}, 
+{"id": 2, 
+"Hotel": "Intercontinental Hotel", 
+"Ubicacion": "Punta Cana", 
+"Habitaciones disponibles": 3},
+{"id": 3, 
+"Hotel": "Crowne Plaza Hotel", 
+"Ubicacion": "Miami", 
+"Habitaciones disponibles": 8}]

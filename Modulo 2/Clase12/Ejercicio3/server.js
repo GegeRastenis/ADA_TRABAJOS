@@ -12,3 +12,32 @@ Estructura del Proyecto:
 solicitudes.
 • server.js: Servidor TCP.
 • client.js: Cliente TCP*/
+
+const net = require('net')
+
+const {handleMovieRequest} = require('./Controllers/MoviesControllers')
+
+const server = net.createServer((socket)=>{
+    console.log('Cliente conectado')
+
+    socket.on('data', (data)=>{
+        const movieTitle = data.toString().trim()
+        console.log(`Solicitud recibida: Titulo de la pelicula ${movieTitle}`); 
+
+        const response = handleMovieRequest(movieTitle); 
+
+        socket.write(response); 
+    })
+
+    socket.on('end', ()=>{
+        console.log('Cliente desconectado'); 
+    })
+
+    socket.on('err', ()=>{
+        console.error(err)
+    })
+})
+
+server.listen(4002, ()=>{
+    console.log('Servidor escuchando desde el puerto 4002');
+})
